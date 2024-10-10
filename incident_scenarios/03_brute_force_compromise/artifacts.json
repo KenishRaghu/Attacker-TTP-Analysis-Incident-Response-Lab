@@ -1,0 +1,12 @@
+{
+  "incident_id": "IR-2024-LAB-003",
+  "title": "Brute-force login compromise",
+  "mitre_primary": ["T1110", "T1078"],
+  "attacker_objective": "Gain VPN/IdP access via guessing",
+  "ioc": {
+    "accounts": ["svc_backup"],
+    "ipv4_note": "See forensic_artifacts/notes/auth_bruteforce_excerpt.log"
+  },
+  "malware_hashes": [],
+  "containment_priority": "P0_disable_account"
+}

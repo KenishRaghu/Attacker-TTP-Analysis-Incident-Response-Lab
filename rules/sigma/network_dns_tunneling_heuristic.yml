@@ -1,0 +1,21 @@
+title: Lab - DNS Query Length Heuristic (Tunneling Signal)
+id: 7c8d9e0f-1a2b-3c4d-5e6f-7890abcdef04
+status: experimental
+description: Flags unusually long DNS query names that may indicate tunneling (tune FQDN length threshold in SIEM).
+author: IR Lab
+date: 2024/10/12
+references:
+  - https://attack.mitre.org/techniques/T1071/004/
+logsource:
+  category: dns_query
+  product: windows
+detection:
+  selection:
+    QueryName|re: '.{60,}'
+  condition: selection
+falsepositives:
+  - Long CDN hostnames
+level: low
+tags:
+  - attack.command_and_control
+  - attack.t1071.004

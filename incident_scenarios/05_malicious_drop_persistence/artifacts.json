@@ -1,0 +1,14 @@
+{
+  "incident_id": "IR-2024-LAB-005",
+  "title": "Malicious drop and persistence",
+  "mitre_primary": ["T1105", "T1547.001", "T1055"],
+  "attacker_objective": "Persistence and stealthy execution via injection",
+  "ioc": {
+    "file_paths": ["C:\\\\Users\\\\Public\\\\Updates\\\\svchost_helper.dll"],
+    "registry_keys": ["HKCU\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run\\\\LabUpdater"]
+  },
+  "malware_hashes": [
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  ],
+  "containment_priority": "P0_isolate_and_hunt_registry"
+}

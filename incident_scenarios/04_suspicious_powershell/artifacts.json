@@ -1,0 +1,12 @@
+{
+  "incident_id": "IR-2024-LAB-004",
+  "title": "Suspicious PowerShell execution",
+  "mitre_primary": ["T1059.001", "T1105"],
+  "attacker_objective": "Execute payloads with minimal footprint",
+  "ioc": {
+    "processes": ["powershell.exe", "rundll32.exe"],
+    "command_line_patterns": ["-enc", "DownloadString", "Invoke-Expression"]
+  },
+  "malware_hashes": [],
+  "containment_priority": "P0_isolate_and_memory_triage"
+}

@@ -1,0 +1,6 @@
+2024-10-15T22:01:03Z vpn-auth failure user=svc_backup src=198.51.100.10
+2024-10-15T22:01:04Z vpn-auth failure user=svc_backup src=198.51.100.11
+2024-10-15T22:01:05Z vpn-auth failure user=svc_backup src=198.51.100.12
+2024-10-15T22:15:00Z vpn-auth failure user=svc_backup src=198.51.100.40
+2024-10-15T23:44:11Z vpn-auth success user=svc_backup src=203.0.113.88
+2024-10-15T23:44:12Z vpn-session start user=svc_backup session_id=lab-sess-991

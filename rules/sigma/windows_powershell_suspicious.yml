@@ -1,0 +1,33 @@
+title: Lab - Suspicious PowerShell Encoded or Bypass Patterns
+id: 8f3c2b1a-4d5e-6f70-8192-abcdef001301
+status: experimental
+description: Detects common obfuscation and execution bypass patterns in PowerShell command lines (lab rule).
+author: IR Lab
+date: 2024/10/12
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\powershell.exe'
+  suspicious:
+    CommandLine|contains:
+      - '-enc '
+      - ' -enc'
+      - '-EncodedCommand'
+      - ' Bypass '
+      - 'IEX '
+      - 'Invoke-Expression'
+      - 'DownloadString'
+      - 'FromBase64String'
+      - '-w hidden'
+      - '-WindowStyle Hidden'
+  condition: selection and suspicious
+falsepositives:
+  - Legitimate administrative scripts using encoded commands
+level: high
+tags:
+  - attack.execution
+  - attack.t1059.001

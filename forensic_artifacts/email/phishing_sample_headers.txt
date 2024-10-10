@@ -1,0 +1,18 @@
+Return-Path: <bounce@totally-legit-it.xyz>
+Received: from mail-out-03.totally-legit-it.xyz (mail-out [192.0.2.54])
+  by inbound.enterprise-lab.example with ESMTP id abc123;
+  Thu, 16 Oct 2024 08:12:01 +0000 (UTC)
+Reply-To: helpdesk-spoof@secure-mailboxes.ru
+From: "IT Helpdesk" <no-reply@enterprise-lab.example>
+To: victim.user@enterprise-lab.example
+Subject: ACTION REQUIRED: Password expiration in 24 hours
+Authentication-Results: enterprise-lab.example;
+  spf=fail (sender IP is not permitted) smtp.mailfrom=bounce@totally-legit-it.xyz;
+  dkim=fail (no key for domain)
+Date: Thu, 16 Oct 2024 08:11:58 +0000
+Message-ID: <20241016.fake.lab@totally-legit-it.xyz>
+
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html><body>Please verify: http://secure-login-verify.example/verify-account</body></html>

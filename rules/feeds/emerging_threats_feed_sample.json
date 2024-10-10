@@ -1,0 +1,35 @@
+{
+  "feed_name": "lab_emerging_threats_simulation",
+  "generated_utc": "2024-10-18T14:00:00Z",
+  "description": "Simulated emerging-threat IOC publish for detection pipeline testing (RFC 1918/lab hosts only).",
+  "iocs": [
+    {
+      "type": "domain",
+      "value": "malware-c2.example",
+      "mitre": ["T1071.001"],
+      "confidence": "medium",
+      "first_seen": "2024-10-17"
+    },
+    {
+      "type": "ipv4",
+      "value": "203.0.113.50",
+      "mitre": ["T1071.001"],
+      "confidence": "medium",
+      "first_seen": "2024-10-17"
+    },
+    {
+      "type": "domain",
+      "value": "secure-login-verify.example",
+      "mitre": ["T1566.002"],
+      "confidence": "high",
+      "first_seen": "2024-10-16"
+    },
+    {
+      "type": "sha256",
+      "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mitre": ["T1105"],
+      "confidence": "low",
+      "note": "Placeholder hash for pipeline schema testing"
+    }
+  ]
+}

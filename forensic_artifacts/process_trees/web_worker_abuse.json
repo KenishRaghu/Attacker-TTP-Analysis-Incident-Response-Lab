@@ -1,0 +1,17 @@
+{
+  "host": "WEB-TIER-LAB-01",
+  "root": {
+    "pid": 1200,
+    "name": "w3wp.exe",
+    "command_line": "w3wp.exe -ap \"DefaultAppPool\"",
+    "children": [
+      {
+        "pid": 1288,
+        "name": "cmd.exe",
+        "command_line": "cmd.exe /c echo possible_post_exploit",
+        "investigation_status": "narrative_only",
+        "children": []
+      }
+    ]
+  }
+}

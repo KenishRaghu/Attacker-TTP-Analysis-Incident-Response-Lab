@@ -1,0 +1,16 @@
+{
+  "host": "WKST-LAB-VPN-POOL",
+  "root": {
+    "pid": 4400,
+    "name": "explorer.exe",
+    "children": [
+      {
+        "pid": 4420,
+        "name": "cmd.exe",
+        "command_line": "cmd.exe /c net group \"domain admins\" /domain",
+        "children": []
+      }
+    ]
+  },
+  "mitre": ["T1078", "T1087"]
+}

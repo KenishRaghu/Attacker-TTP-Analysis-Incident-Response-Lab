@@ -1,0 +1,18 @@
+{
+  "host": "WKST-LAB-001",
+  "root": {
+    "pid": 9000,
+    "name": "msedge.exe",
+    "children": [
+      {
+        "pid": 9012,
+        "name": "msedge.exe",
+        "command_line": "--type=utility",
+        "children": []
+      }
+    ]
+  },
+  "notes": [
+    "Phish scenario is primarily browser+IdP; expand with drive-by if needed."
+  ]
+}

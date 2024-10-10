@@ -1,0 +1,5 @@
+# Attacker TTP Analysis & Incident Response Lab
+pytest>=8.0.0
+pyyaml>=6.0.1
+requests>=2.31.0
+scapy>=2.5.0

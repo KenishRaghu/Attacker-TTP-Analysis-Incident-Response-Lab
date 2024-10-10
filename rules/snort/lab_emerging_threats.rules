@@ -1,0 +1,8 @@
+# Snort rules — parity with Suricata set for dual-IDS lab validation.
+alert tcp any any -> any $HTTP_PORTS (msg:"LAB T1071 HTTP suspicious stage URI"; flow:to_server,established; content:"GET"; http_method; content:"/stage2.bin"; http_uri; sid:9205501; rev:1; metadata:mitre_technique T1071.001;)
+
+alert tcp any any -> any $HTTP_PORTS (msg:"LAB T1105 Possible downloader path"; flow:to_server,established; content:"GET"; http_method; content:".exe"; http_uri; content:"download"; http_uri; sid:9205502; rev:1; metadata:mitre_technique T1105;)
+
+alert tcp any any -> any $HTTP_PORTS (msg:"LAB Path traversal probe"; flow:to_server,established; content:"GET"; http_method; content:"/../"; http_uri; sid:9205503; rev:1; metadata:mitre_technique T1190;)
+
+alert tcp any any -> any $HTTP_PORTS (msg:"LAB Phishing landing pattern"; flow:to_server,established; content:"GET"; http_method; content:"verify"; http_uri; content:"account"; http_uri; sid:9205504; rev:1; metadata:mitre_technique T1566;)

@@ -1,0 +1,12 @@
+# Suricata rules — synthetic lab SIDs; map to MITRE in incident narrative.
+# T1071 Application Layer Protocol — HTTP C2 patterns
+alert http any any -> any any (msg:"LAB T1071 HTTP URI suspicious stage download"; flow:to_server; content:"GET"; http_method; content:"/stage2.bin"; http_uri; sid:9105501; rev:1; classtype:trojan-activity; metadata:mitre_technique T1071.001;)
+
+# T1105 Ingress Tool Transfer — certutil download
+alert http any any -> any any (msg:"LAB T1105 Possible certutil cache fetch pattern in URI"; flow:to_server; content:"GET"; http_method; content:".exe"; http_uri; content:"/download"; http_uri; sid:9105502; rev:1; classtype:trojan-activity; metadata:mitre_technique T1105;)
+
+# Path traversal / scanning (web exploit scenario)
+alert http any any -> any $HTTP_PORTS (msg:"LAB Web path traversal probe"; flow:to_server; content:"GET"; http_method; content:"/../"; http_uri; sid:9105503; rev:1; classtype:web-application-attack; metadata:mitre_technique T1190;)
+
+# Phishing landing patterns
+alert http any any -> any any (msg:"LAB T1566 Phishing path pattern verify-account"; flow:to_server; content:"GET"; http_method; content:"verify"; http_uri; content:"account"; http_uri; sid:9105504; rev:1; classtype:social-engineering; metadata:mitre_technique T1566;)

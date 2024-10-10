@@ -1,0 +1,24 @@
+{
+  "sample_name": "malware_32.exe.lab",
+  "submitted_utc": "2024-10-17T07:00:00Z",
+  "verdict": "malicious",
+  "mitre_attack": [
+    "T1071.001",
+    "T1105"
+  ],
+  "network": {
+    "domains": ["malware-c2.example", "beacon.dyn-malware.example"],
+    "ipv4": ["203.0.113.50"]
+  },
+  "static": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "imphash": "deadbeefdeadbeefdeadbeefdeadbeef",
+    "file_type": "PE32 executable"
+  },
+  "behavior": [
+    "Resolved DNS beacon.dyn-malware.example",
+    "HTTP GET /stage2.bin?id=a1b2 to 203.0.113.50:8080",
+    "Created mutex Global\\LAB_MUTEX_STAGER"
+  ],
+  "disclaimer": "Lab-generated sandbox-style report for interview practice."
+}

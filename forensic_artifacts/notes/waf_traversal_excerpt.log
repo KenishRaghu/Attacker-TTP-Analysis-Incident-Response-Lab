@@ -1,0 +1,3 @@
+2024-10-20T10:02:01Z edge=waf-prod-1 action=block client=198.51.100.77 uri=/cgi-bin/../../../etc/passwd rule=path_traversal_generic
+2024-10-20T10:02:02Z edge=waf-prod-1 action=block client=198.51.100.77 uri=/..%2f..%2f..%2fetc%2fpasswd rule=normalized_traversal
+2024-10-20T10:03:10Z edge=waf-prod-1 action=log client=198.51.100.77 uri=/cgi-bin/test.cgi method=GET status=404
