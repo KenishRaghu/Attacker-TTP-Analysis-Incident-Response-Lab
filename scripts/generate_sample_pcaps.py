@@ -16,7 +16,7 @@ except ImportError:
     sys.exit(1)
 
 
-def dns_beacon(dst_ip: str = "10.0.0.5", qname: str = "beacon.dyn-malware.example") -> list:
+def dns_beacon(qname: str = "beacon.dyn-malware.example") -> list:
     pkt = (
         _E()
         / IP(src="192.168.1.100", dst="8.8.8.8")

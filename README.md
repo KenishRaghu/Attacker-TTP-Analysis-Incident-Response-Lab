@@ -89,6 +89,10 @@ The detection module mirrors modern SOC engineering: portable rules (Sigma), edg
 
 ---
 
+## GitHub repository name
+
+The reference implementation is pushed to **`KenishRaghu/Attacker-TTP-Analysis-Incident-Response-Lab`**. If you want the shorter slug **`attacker-ttp-analysis-ir-lab`**, rename the repository in GitHub **Settings → General → Repository name** (GitHub preserves redirects from the old name for a period).
+
 ## License / use
 
 Synthetic content for education and interviews. Verify independently before operational use.
