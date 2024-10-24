@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install YARA
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y yara tshark
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Regenerate lab PCAPs
+        run: PYTHONPATH=src python scripts/generate_sample_pcaps.py --out forensic_artifacts/pcaps
+
+      - name: Run pytest
+        env:
+          PYTHONPATH: src
+        run: pytest -q
+
+      - name: Validate PCAPs exist
+        run: test -f forensic_artifacts/pcaps/c2_http_beacon_lab.pcap
