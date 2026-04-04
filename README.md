@@ -77,22 +77,6 @@ See **`INVESTIGATION_WALKTHROUGH.md`** for a scenario-by-scenario explanation pa
 
 ---
 
-## Interview framing (Cloudflare Threat Detection / IR)
-
-For each incident, the write-up includes:
-
-- Attacker **objective** and **TTP chain**  
-- **ATT&CK** stages, inferred **next steps**, **containment priority**  
-- A **recommended new detection** bridging IR outcomes to improved defensive posture  
-
-The detection module mirrors modern SOC engineering: portable rules (Sigma), edge/network IDS, Zeek notices for scalable metadata, YARA for hunt, and a **feed simulation** JSON for pipeline testing.
-
----
-
 ## GitHub repository name
 
 The reference implementation is pushed to **`KenishRaghu/Attacker-TTP-Analysis-Incident-Response-Lab`**. If you want the shorter slug **`attacker-ttp-analysis-ir-lab`**, rename the repository in GitHub **Settings → General → Repository name** (GitHub preserves redirects from the old name for a period).
-
-## License / use
-
-Synthetic content for education and interviews. Verify independently before operational use.
